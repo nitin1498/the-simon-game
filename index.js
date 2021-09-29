@@ -1,5 +1,13 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
+var userClickPattern = [];
+
+$('.btn').click(function () {
+    var userChosenColour = $( this ).attr('id');
+    userClickPattern.push(userChosenColour);
+    console.log(userClickPattern);
+});
+
 function nextSequence() {
     var randomNumber = Math.floor(Math.random() * 4);
     console.log(randomNumber + 'nitin');
@@ -9,3 +17,4 @@ function nextSequence() {
     var audio = new Audio('sounds/' + randomChosenColor + ".mp3");
     audio.play();
 }
+
