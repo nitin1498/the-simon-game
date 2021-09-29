@@ -5,5 +5,7 @@ function nextSequence() {
     console.log(randomNumber + 'nitin');
     var randomChosenColor = buttonColours[randomNumber];
     gamePattern.push(randomChosenColor);
-
+    $("#" + randomChosenColor).fadeOut(100).fadeIn(100);
+    var audio = new Audio('sounds/' + randomChosenColor + ".mp3");
+    audio.play();
 }
